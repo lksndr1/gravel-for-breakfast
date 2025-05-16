@@ -1,3 +1,5 @@
+@use "./../../../../src/styles/variables.scss" as *;
+
 .hero {
-  color: green;
+  color: $text-color;
 }
