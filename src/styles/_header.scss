@@ -1,0 +1,7 @@
+@use "./variables.scss" as *;
+
+.header {
+    padding: 36px 20px;
+    display: flex;
+    justify-content: space-between;
+}

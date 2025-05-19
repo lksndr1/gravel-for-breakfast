@@ -1,5 +1,9 @@
 @use "./variables.scss" as *;
 
+body {
+    color: $text-color;
+}
+
 // containers
 .wrapper {
     width: 100%;
