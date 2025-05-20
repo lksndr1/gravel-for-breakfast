@@ -8,6 +8,20 @@ function gravel_for_breakfast_scripts()
 }
 add_action('wp_enqueue_scripts', 'gravel_for_breakfast_scripts');
 
+// Register menus
+
+function gravel_for_breakfast_menus() {
+    $locations = array(
+        'header' => __('Header Menu', 'gravel-for-breakfast'),
+        'footer' => __('Footer Menu', 'gravel-for-breakfast'),
+        'option' => __('Option Menu', 'gravel-for-breakfast'),
+    );
+
+    register_nav_menus($locations);
+}
+add_action('init', 'gravel_for_breakfast_menus');
+
+// ACF assets
 function register_acf_block_assets() {
     $blocks_dir = get_template_directory() . '/inc/acf/blocks';
 

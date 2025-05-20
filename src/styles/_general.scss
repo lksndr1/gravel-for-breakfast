@@ -2,6 +2,7 @@
 
 body {
     color: $text-color;
+    background-color: $bg-color;
 }
 
 // containers
@@ -16,6 +17,7 @@ body {
     width: 100%;
     max-width: 1340px;
     margin: 0 auto;
+    padding: 0 20px;
 
     @media screen and (max-width: $laptop) {
         padding: 0 30px;
@@ -28,16 +30,9 @@ body {
 
 main {
     flex: 1 1 auto;
+    padding-top: 100px;
 }
 
 .section {
     padding: 30px 0;
-
-    @media screen and (max-width: $laptop) {
-        padding: 25px 0;
-    }
-
-    @media screen and (max-width: $tablet) {
-        padding: 18px 0;
-    }
 }

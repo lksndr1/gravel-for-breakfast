@@ -1,6 +1,5 @@
 const { src, dest, watch, parallel, series } = require("gulp");
-const scss = require("gulp-sass")(require("sass"));
-const concat = require("gulp-concat");
+const scss = require("gulp-dart-sass");
 const uglify = require("gulp-uglify-es").default;
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");

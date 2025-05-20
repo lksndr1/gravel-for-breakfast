@@ -1,6 +1,9 @@
-<footer>
-    <p>footer</p>
-</footer>
-<?php wp_footer(); ?>  
-</body>
+            <div class="container">
+                <footer>
+                    <p>footer</p>
+                </footer>
+            </div>
+            <?php wp_footer(); ?>
+        </div>
+    </body>
 </html>
