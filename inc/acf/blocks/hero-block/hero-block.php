@@ -12,8 +12,9 @@ if (file_exists($modules_file)) {
 }
 ?>
 
-<section class="section">
-    <div class="container">
-            <p class="<?php echo esc_attr($classes['hero']); ?>">Hero</p>
-    </div>
-</section>
+
+<div class="container">
+    <section class="section">
+        <p class="<?php echo esc_attr($classes['hero']); ?>">Hero</p>
+    </section>
+</div>

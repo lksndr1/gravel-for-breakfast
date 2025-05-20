@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("header-dropdown-menu-toggle"),n=document.querySelector(".header-dropdown-menu-wrapper");e.addEventListener("click",(function(){n.classList.toggle("menu-visible")}))}));
