@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: $white;
     z-index: 1000;
 }
 
@@ -41,9 +41,34 @@
 .header-dropdown-menu-wrapper {
     position: absolute;
     right: 0%;
+    padding: 24px;
+    border-radius: 25px;
+    color: $white;
+    background-color: $dark-green;
+    opacity: 0.75;
     display: none;
 }
 
 .header-dropdown-menu-wrapper.menu-visible {
     display: block;
+}
+
+#close-dropdown-menu:hover {
+    color: $light-green;
+}
+
+#close-dropdown-menu::after {
+    content: '';
+    display: block;
+    width: 317px;
+    height: 1px;
+    background-color: $white;
+}
+
+.dropdown-menu-nav {
+    color: rgba($white, 0.25);
+}
+
+.dropdown-menu-nav li:hover {
+    color: white;
 }

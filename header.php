@@ -31,6 +31,7 @@
                             <img src="<?php echo esc_url($burger_menu_url); ?>" alt="<?php echo esc_attr($burger_menu_alt); ?>">
                         </button>
                         <div class='header-dropdown-menu-wrapper'>
+                            <button id='close-dropdown-menu'>X close</button>
                             <nav class="dropdown-menu-nav">
                                 <?php wp_nav_menu([
                                     'theme_location'       => 'header',
