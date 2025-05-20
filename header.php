@@ -27,7 +27,7 @@
                         $burger_menu_url = $burger_menu['url'];
                         $burger_menu_alt = $burger_menu['alt'];
                     ?>
-                        <button>
+                        <button id='header-dropdown-menu-toggle'>
                             <img src="<?php echo esc_url($burger_menu_url); ?>" alt="<?php echo esc_attr($burger_menu_alt); ?>">
                         </button>
                         <div class='header-dropdown-menu-wrapper'>

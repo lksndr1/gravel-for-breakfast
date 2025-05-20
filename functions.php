@@ -5,6 +5,7 @@ function gravel_for_breakfast_scripts()
     wp_enqueue_style('main', get_stylesheet_uri());
     wp_enqueue_style('gravel-for-breakfast-style', get_template_directory_uri() . '/assets/styles/main.css', array('main'));
     wp_enqueue_script('gravel-for-breakfast-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true);
+    wp_enqueue_script('gravel-for-breakfast-header-scripts', get_template_directory_uri() . '/assets/scripts/header.js');
 }
 add_action('wp_enqueue_scripts', 'gravel_for_breakfast_scripts');
 

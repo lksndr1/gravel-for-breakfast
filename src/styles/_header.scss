@@ -41,4 +41,9 @@
 .header-dropdown-menu-wrapper {
     position: absolute;
     right: 0%;
+    display: none;
+}
+
+.header-dropdown-menu-wrapper.menu-visible {
+    display: block;
 }
