@@ -10,6 +10,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
+            <div class="overlay" id="menu-overlay"></div>
             <div class="container">
                 <?php
                 $logo = get_field('logo', 'option');
@@ -31,7 +32,11 @@
                             <img src="<?php echo esc_url($burger_menu_url); ?>" alt="<?php echo esc_attr($burger_menu_alt); ?>">
                         </button>
                         <div class='header-dropdown-menu-wrapper'>
-                            <button id='close-dropdown-menu'>X close</button>
+                            <button id='close-dropdown-menu' type="button" aria-label="Close menu">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.8335 5.83331L14.1668 14.1666M5.8335 14.1666L14.1668 5.83331" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                             <nav class="dropdown-menu-nav">
                                 <?php wp_nav_menu([
                                     'theme_location'       => 'header',
