@@ -17,7 +17,7 @@
                                 $social_icon = get_sub_field('social_icon');
                                 $social_icon_url = $social_icon['url'];
                                 $social_icon_alt = $social_icon['alt'];
-                                $social_icon_link = get_sub_field('link');
+                                $social_icon_link = get_sub_field('social_link');
                             ?>
                                 <li>
                                     <a href="<?php echo esc_url($social_icon_link); ?>" target="_blank" rel="noopener">
