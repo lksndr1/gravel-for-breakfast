@@ -1,1 +1,1 @@
-console.log("footer");
+document.addEventListener("DOMContentLoaded",(function(){const t=document.getElementById("to_top_button");t&&t.addEventListener("click",(function(){window.scrollTo({top:0,behavior:"smooth"})}))}));
