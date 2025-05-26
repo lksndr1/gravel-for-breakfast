@@ -79,3 +79,13 @@
         top: 4px;
     }
 }
+
+#to_top_button:hover {
+    svg rect {
+        fill: $dark-green;
+    }
+
+    svg path {
+        stroke: $light-green;
+    }
+}
