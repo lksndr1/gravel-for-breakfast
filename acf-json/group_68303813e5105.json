@@ -1,11 +1,11 @@
 {
-    "key": "group_682ade872dde7",
-    "title": "header",
+    "key": "group_68303813e5105",
+    "title": "Footer",
     "fields": [
         {
-            "key": "field_682adeb162204",
-            "label": "burger menu",
-            "name": "burger_menu",
+            "key": "field_68303814cbc11",
+            "label": "top_button_icon",
+            "name": "top_button_icon",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -29,11 +29,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_682adecf62205",
-            "label": "get in touch",
-            "name": "get_in_touch",
+            "key": "field_6830383ecbc12",
+            "label": "copyright",
+            "name": "copyright",
             "aria-label": "",
-            "type": "image",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -42,17 +42,12 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
+            "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -60,7 +55,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-header"
+                "value": "acf-options-footer"
             }
         ]
     ],
@@ -73,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747905893
+    "modified": 1747990617
 }
