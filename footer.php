@@ -58,17 +58,28 @@
                             <?php endif; ?>
                         </div>
                         
-
+                        <!-- To-top button -->
                         <?php
-                        $to_top_button = get_field('top_button_icon', 'option');
-                        if ($to_top_button) :
-                            $to_top_button_url = $to_top_button['url'];
-                            $to_top_button_alt = $to_top_button['alt'];
+                            $svg_url = get_field('top_button_icon', 'option');
+                            if ($svg_url) {
+                                $cache_key = 'cached_svg_' . md5($svg_url);
+                                $svg_content = get_transient($cache_key);
+
+                                if (!$svg_content) {
+                                    $svg_path = ABSPATH . str_replace(home_url('/'), '', $svg_url);
+                                    if (file_exists($svg_path)) {
+                                        $svg_content = file_get_contents($svg_path);
+                                        set_transient($cache_key, $svg_content, 12 * HOUR_IN_SECONDS);
+                                    }
+                                }
+
+                                if ($svg_content) {
+                                    echo '<button id="to_top_button" class="to-top-button">';
+                                    echo $svg_content;
+                                    echo '</button>';
+                                }
+                            }
                         ?>
-                            <button id='to_top_button'>
-                                <img src="<?php echo esc_url($to_top_button_url); ?>" alt="<?php echo esc_attr($to_top_button_alt); ?>">
-                            </button>
-                        <?php endif; ?>
                     </div>
                 </footer>
             </div>
