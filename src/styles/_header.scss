@@ -64,7 +64,7 @@
     padding: 24px;
     border-radius: 25px;
     color: $white;
-    background-color: $dark-green;
+    background-color: $dark-color;
     opacity: 0.75;
     z-index: 1000;
     display: none;
@@ -76,7 +76,7 @@
 
 #close-dropdown-menu svg:hover {
     path {
-        stroke: $light-green;
+        stroke: $light-color;
     }
 }
 

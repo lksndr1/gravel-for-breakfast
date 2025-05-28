@@ -29,9 +29,30 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_682adecf62205",
-            "label": "get in touch",
-            "name": "get_in_touch",
+            "key": "field_683738d9b21ee",
+            "label": "button_text",
+            "name": "button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68373c2e6b104",
+            "label": "button_icon",
+            "name": "button_icon",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -42,7 +63,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -53,6 +74,24 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_68376484f56cb",
+            "label": "button_link",
+            "name": "button_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 1,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -73,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747905893
+    "modified": 1748461221
 }

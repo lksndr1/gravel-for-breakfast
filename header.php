@@ -48,14 +48,18 @@
                                 ]); ?>
                             </nav>
                         </div>
-                    <?php endif;
+                     <?php endif; ?>
 
-                    $get_in_touch = get_field('get_in_touch', 'option');
-                    if ($get_in_touch) :
-                        $get_in_touch_url = $get_in_touch['url'];
-                        $get_in_touch_alt = $get_in_touch['alt'];
+                    <!-- button tpr -->
+                    <?php
+                        $button_text = get_field('button_text', 'option');
+                        if (!empty($button_text)) :
                     ?>
-                        <img class='get-in-touch' src="<?php echo esc_url($get_in_touch_url); ?>" alt="<?php echo esc_attr($get_in_touch_alt); ?>">
+                        <div class="get-in-touch <?php echo esc_attr($classes['button-template-part']); ?>">
+                            <?php get_template_part('template-parts/button-small-icon', null,[
+                                'text' => $button_text,
+                                ]); ?>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>

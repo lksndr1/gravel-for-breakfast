@@ -1,0 +1,35 @@
+@use "../variables.scss" as *;
+
+.button-small-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background-color: $light-color;
+    border-radius: 500px;
+}
+
+.button-icon svg {
+    circle {
+        fill: $dark-color;
+    }
+
+    path {
+        stroke: $light-color;
+    }
+}
+
+.button-small-icon:hover {
+    background-color: $dark-color;
+    color: $light-color;
+
+    .button-icon svg {
+        circle {
+            fill: $light-color;
+        }
+
+        path {
+            stroke: $dark-color;
+        }
+    }
+}
