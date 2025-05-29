@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_682adeb162204",
-            "label": "burger menu",
-            "name": "burger_menu",
+            "label": "burger_menu_icon",
+            "name": "burger_menu_icon",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -90,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748533878
+    "modified": 1748535663
 }

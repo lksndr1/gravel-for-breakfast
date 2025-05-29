@@ -51,6 +51,12 @@
     gap: 12px;
 }
 
+.burger-button:hover svg {
+    rect {
+        fill: $light-color;
+    }
+}
+
 .header .get-in-touch {
     @media screen and (max-width: 600px) {
         display: none;
