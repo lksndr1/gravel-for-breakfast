@@ -12,16 +12,31 @@
         <header class="header">
             <div class="overlay" id="menu-overlay"></div>
             <div class="container">
+                <!-- logo -->
                 <?php
-                $logo = get_field('logo', 'option');
-                if ($logo) :
-                    $logo_url = $logo['url'];
-                    $logo_alt = $logo['alt'];
+                    $svg_url = get_field('logo', 'option');
+                    if ($svg_url) {
+                        $cache_key = 'cached_svg_' . md5($svg_url);
+                        $svg_content = get_transient($cache_key);
+
+                        if (!$svg_content) {
+                            $svg_path = ABSPATH . str_replace(home_url('/'), '', $svg_url);
+                            if (file_exists($svg_path)) {
+                                $svg_content = file_get_contents($svg_path);
+                                set_transient($cache_key, $svg_content, 12 * HOUR_IN_SECONDS);
+                            }
+                        }
+
+                        if ($svg_content) {
+                            echo '<div class="header-logo">';
+                            echo $svg_content;
+                            echo '</div>';
+                        }
+                    }
                 ?>
-                    <img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr($logo_alt); ?>">
-                <?php endif; ?>
 
                 <div class='header-buttons'>
+                    <!-- burger-menu -->
                     <?php
                         $svg_url = get_field('burger_menu_icon', 'option');
                         if ($svg_url) {

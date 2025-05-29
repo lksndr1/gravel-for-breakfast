@@ -45,6 +45,12 @@
     }
 }
 
+.header-logo:hover svg {
+    path:nth-child(3) {
+        fill: $light-color;
+    }
+}
+
 .header-buttons {
     position: relative;
     display: flex;
