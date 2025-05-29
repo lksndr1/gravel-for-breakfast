@@ -1,6 +1,6 @@
 @use "../variables.scss" as *;
 
-.button-small-icon {
+.si-link {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -19,7 +19,7 @@
     }
 }
 
-.button-small-icon:hover {
+.si-link:hover {
     background-color: $dark-color;
     color: $light-color;
 

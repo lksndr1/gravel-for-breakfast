@@ -50,17 +50,19 @@
                         </div>
                      <?php endif; ?>
 
-                    <!-- button tpr -->
+                    <!-- button link -->
                     <?php
-                        $button_text = get_field('button_text', 'option');
-                        if (!empty($button_text)) :
+                        $header_link = get_field('header_link', 'option');
+                        if (!empty($header_link)) :
+                            $link_class = isset($classes['link']) ? esc_attr($classes['link']) : 'header_link';
+                            get_template_part('template-parts/button-small-icon', null, [
+                                'link' => $header_link['url'],
+                                'link_text' => $header_link['title'],
+                                'link_class' => $link_class
+                            ]);
+                            
+                        endif;
                     ?>
-                        <div class="get-in-touch <?php echo esc_attr($classes['button-template-part']); ?>">
-                            <?php get_template_part('template-parts/button-small-icon', null,[
-                                'text' => $button_text,
-                                ]); ?>
-                        </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </header>
