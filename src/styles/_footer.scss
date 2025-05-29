@@ -5,7 +5,7 @@
     display: block;
     width: 100%;
     height: 1px;
-    background-color: $light-green;
+    background-color: $light-color;
     margin: 68px 0 40px;
 
     @media screen and (max-width: $tablet) {
@@ -29,6 +29,12 @@
         grid-column-gap: 0px;
         grid-row-gap: 16px;
         padding-bottom: 24px;
+    }
+}
+
+.footer-logo:hover svg {
+    path:nth-child(3) {
+        fill: $light-color;
     }
 }
 
@@ -82,10 +88,10 @@
 
 #to_top_button:hover {
     svg rect {
-        fill: $dark-green;
+        fill: $dark-color;
     }
 
     svg path {
-        stroke: $light-green;
+        stroke: $light-color;
     }
 }

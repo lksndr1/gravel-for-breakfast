@@ -45,10 +45,22 @@
     }
 }
 
+.header-logo:hover svg {
+    path:nth-child(3) {
+        fill: $light-color;
+    }
+}
+
 .header-buttons {
     position: relative;
     display: flex;
     gap: 12px;
+}
+
+.burger-button:hover svg {
+    rect {
+        fill: $light-color;
+    }
 }
 
 .header .get-in-touch {
@@ -64,7 +76,7 @@
     padding: 24px;
     border-radius: 25px;
     color: $white;
-    background-color: $dark-green;
+    background-color: $dark-color;
     opacity: 0.75;
     z-index: 1000;
     display: none;
@@ -76,7 +88,7 @@
 
 #close-dropdown-menu svg:hover {
     path {
-        stroke: $light-green;
+        stroke: $light-color;
     }
 }
 
