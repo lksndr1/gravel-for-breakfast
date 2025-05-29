@@ -32,6 +32,12 @@
     }
 }
 
+.footer-logo:hover svg {
+    path:nth-child(3) {
+        fill: $light-color;
+    }
+}
+
 .socials {
     display: flex;
     gap: 8px;
