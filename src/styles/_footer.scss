@@ -32,10 +32,8 @@
     }
 }
 
-.footer-logo:hover svg {
-    path:nth-child(3) {
-        fill: $light-color;
-    }
+.footer-logo:hover svg>path:nth-child(3) {
+    fill: $light-color;
 }
 
 .socials {
@@ -80,6 +78,10 @@
 #to_top_button {
     position: absolute;
     right: 0px;
+
+    svg rect {
+        fill: $light-color;
+    }
 
     @media screen and (max-width: $tablet) {
         top: 4px;
