@@ -1,0 +1,26 @@
+@use "../variables.scss" as *;
+
+.socials {
+    display: flex;
+    gap: 8px;
+    padding-top: 4px;
+    margin-left: 137px;
+
+    @media screen and (max-width: $laptop) {
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+}
+
+.socials svg path {
+    stroke: $dark-color;
+}
+
+.socials svg:hover path {
+    stroke: $light-color;
+}

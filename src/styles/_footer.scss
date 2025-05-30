@@ -32,27 +32,8 @@
     }
 }
 
-.footer-logo:hover svg {
-    path:nth-child(3) {
-        fill: $light-color;
-    }
-}
-
-.socials {
-    display: flex;
-    gap: 8px;
-    padding-top: 4px;
-    margin-left: 137px;
-
-    @media screen and (max-width: $laptop) {
-        margin-left: 0px;
-    }
-
-    @media screen and (max-width: $tablet) {
-        justify-content: center;
-        padding-top: 0px;
-    }
-
+.footer-logo:hover svg>path:nth-child(3) {
+    fill: $light-color;
 }
 
 .footer-address {
@@ -80,6 +61,10 @@
 #to_top_button {
     position: absolute;
     right: 0px;
+
+    svg rect {
+        fill: $light-color;
+    }
 
     @media screen and (max-width: $tablet) {
         top: 4px;

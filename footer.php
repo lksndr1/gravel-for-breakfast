@@ -22,29 +22,14 @@
                                     echo '</div>';
                                 }
                             }
-                        ?>
+                            ?>
                         </div>
 
-                        <div>
-                            <?php if( have_rows('socials', 'option') ): ?>
-                                <ul class="socials">
-                                    <?php while( have_rows('socials', 'option') ): the_row(); 
-                                        $social_icon = get_sub_field('social_icon');
-                                        $social_icon_url = $social_icon['url'];
-                                        $social_icon_alt = $social_icon['alt'];
-                                        $social_icon_link = get_sub_field('social_link');
-                                    ?>
-                                        <li>
-                                            <a href="<?php echo esc_url($social_icon_link); ?>" target="_blank" rel="noopener">
-                                                <img src="<?php echo esc_url($social_icon_url); ?>" alt="<?php echo esc_attr($social_icon_alt); ?>">
-                                            </a>
-                                        </li>
-                                    <?php endwhile; ?>
-                                </ul>
-                            <?php endif; ?>
+                        <div class='social-icons'>
+                            <?php if( have_rows('socials', 'option') ):
+                            get_template_part('template-parts/socials');
+                            endif; ?>
                         </div>
-                    
-
                     
                         <div class='footer-address'>
                             <?php
