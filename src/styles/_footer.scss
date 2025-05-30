@@ -36,23 +36,6 @@
     fill: $light-color;
 }
 
-.socials {
-    display: flex;
-    gap: 8px;
-    padding-top: 4px;
-    margin-left: 137px;
-
-    @media screen and (max-width: $laptop) {
-        margin-left: 0px;
-    }
-
-    @media screen and (max-width: $tablet) {
-        justify-content: center;
-        padding-top: 0px;
-    }
-
-}
-
 .footer-address {
     @media screen and (max-width: $tablet) {
         text-align: center;
