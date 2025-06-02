@@ -1,11 +1,11 @@
 {
     "key": "group_68263510e8187",
-    "title": "Hero",
+    "title": "Hero-block",
     "fields": [
         {
             "key": "field_682635112719d",
-            "label": "hero",
-            "name": "hero",
+            "label": "heading",
+            "name": "heading",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -24,9 +24,9 @@
             "append": ""
         },
         {
-            "key": "field_6837373b02bba",
-            "label": "small_button_text",
-            "name": "small_button_text",
+            "key": "field_683d64f635ee2",
+            "label": "description",
+            "name": "description",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -63,5 +63,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748449124
+    "modified": 1748854032
 }

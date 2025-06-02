@@ -3,6 +3,9 @@
     "text1": "block1-module__text1___g4nM-"
   },
   "hero-block": {
-    "hero": "hero-block-module__hero___N7t4c"
+    "text-wrapper": "hero-block-module__text-wrapper___UICE6",
+    "flex-wrapper": "hero-block-module__flex-wrapper___LnIi1",
+    "right-col-wrapper": "hero-block-module__right-col-wrapper___ZqNY8",
+    "email-copyright-wrapper": "hero-block-module__email-copyright-wrapper___UMiLo"
   }
 }
