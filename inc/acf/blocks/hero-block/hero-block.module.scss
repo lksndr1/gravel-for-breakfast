@@ -12,6 +12,10 @@
 .flex-wrapper {
   display: flex;
   gap: 48px;
+
+  @media screen and (max-width: $laptop) {
+    gap: 24px;
+  }
 }
 
 .flex-wrapper>* {
@@ -20,4 +24,13 @@
 
 .right-col-wrapper {
   padding-left: 22%;
+
+  @media screen and (max-width: $laptop) {
+    padding: 0;
+  }
+}
+
+.email-copyright-wrapper {
+  display: flex;
+  justify-content: space-between;
 }

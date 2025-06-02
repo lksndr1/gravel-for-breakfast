@@ -5,7 +5,7 @@ $default_classes = [
     'left-col' => 'left-col',
     'right-col' => 'right-col',
     'right-col-wrapper' => 'right-col-wrapper',
-
+    'email-copyright-wrapper' => 'email-copyright-wrapper',
 ];
 
 $modules_file = get_template_directory() . '/assets/blocks/styles/modules.json';
@@ -31,7 +31,35 @@ if (file_exists($modules_file)) {
                 </div>
             </div>
         </div>
-        <div class="<?php echo esc_attr($classes['address-wrapper']); ?>">
+        <div class="<?php echo esc_attr($classes['flex-wrapper']); ?>">
+            <div class="<?php echo esc_attr($classes['left-col']); ?>">
+                <?php
+                $address = get_field('address', 'option');
+                if ($address) :
+                ?>
+                    <p><?php echo $address ?></p>
+                <?php endif; ?>
+            </div>
+
+            <div class="<?php echo esc_attr($classes['right-col']); ?>">
+                <div class="<?php echo esc_attr($classes['right-col-wrapper']); ?>">
+                    <div class="<?php echo esc_attr($classes['email-copyright-wrapper']); ?>">
+                        <?php
+                        $email = get_field('email', 'option');
+                        if ($email) :
+                        ?>
+                            <p><?php echo $email ?></p>
+                        <?php endif; ?>
+
+                        <?php
+                        $copyright = get_field('copyright', 'option');
+                        if ($copyright) :
+                        ?>
+                            <p><?php echo $copyright ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
