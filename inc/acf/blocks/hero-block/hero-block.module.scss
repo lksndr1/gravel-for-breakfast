@@ -1,6 +1,23 @@
 @use "./../../../../src/styles/variables.scss" as *;
 
-.hero {
-  color: $text-color;
-  height: 1000px;
+.text-wrapper::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $light-color;
+  margin: 24px 0 12px;
+}
+
+.flex-wrapper {
+  display: flex;
+  gap: 48px;
+}
+
+.flex-wrapper>* {
+  flex: 1;
+}
+
+.right-col-wrapper {
+  padding-left: 22%;
 }
