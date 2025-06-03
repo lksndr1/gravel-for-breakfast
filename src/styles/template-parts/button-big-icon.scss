@@ -1,0 +1,11 @@
+@use "../variables.scss" as *;
+
+.bi-link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 12px;
+    padding: 4px 4px 4px 16px;
+    border: 1px solid $light-color;
+    border-radius: 500px;
+}
