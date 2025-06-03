@@ -27,6 +27,18 @@ if (file_exists($modules_file)) {
                 <div class="<?php echo esc_attr($classes['right-col']); ?>">
                     <div class="<?php echo esc_attr($classes['right-col-wrapper']); ?>">
                         <p><?php echo get_field('description') ?></p>
+                        <?php
+                            $hero_link = get_field('hero_link');
+                            if (!empty($hero_link)) :
+                                $hero_link_class = isset($classes['big_link']) ? esc_attr($classes['big_link']) : 'hero_link';
+                                get_template_part('template-parts/button-big-icon', null, [
+                                    'big_link' => $hero_link['url'],
+                                    'big_link_text' => $hero_link['title'],
+                                    'big_link_class' => $hero_link_class
+                                ]);
+                
+                            endif;
+                        ?>
                     </div>
                 </div>
             </div>
