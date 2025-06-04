@@ -9,3 +9,19 @@
     border: 1px solid $light-color;
     border-radius: 500px;
 }
+
+.bi-link:hover {
+    color: $light-color;
+    background-color: $dark-color;
+    border: 1px solid $dark-color;
+}
+
+.button-big-icon svg {
+    rect {
+        fill: $light-color;
+    }
+
+    path {
+        stroke: $dark-color;
+    }
+}

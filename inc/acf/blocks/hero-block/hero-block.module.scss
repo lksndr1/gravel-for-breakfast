@@ -1,5 +1,9 @@
 @use "./../../../../src/styles/variables.scss" as *;
 
+.hero-section {
+  padding-top: 150px;
+}
+
 .text-wrapper::after {
   content: '';
   display: block;
@@ -24,13 +28,48 @@
 
 .right-col-wrapper {
   padding-left: 22%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media screen and (max-width: $laptop) {
-    padding: 0;
+    padding-left: 0;
+    padding-top: 3px;
+  }
+}
+
+.description {
+  padding-top: 8px;
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 3px;
   }
 }
 
 .email-copyright-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.hero-image-wrapper {
+  margin-top: 36px;
+  width: 100%;
+  height: 524px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: $laptop) {
+    height: 348px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    height: 200px;
+  }
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

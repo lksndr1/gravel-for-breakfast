@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1340px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 
@@ -84,6 +84,7 @@ h3 {
 
 p {
     font-family: $secondary-font;
+    line-height: 1.2em;
     letter-spacing: -0.04em;
 }
 

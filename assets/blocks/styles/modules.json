@@ -1,8 +1,14 @@
 {
+  "block1": {
+    "text1": "block1-module__text1___g4nM-"
+  },
   "hero-block": {
+    "hero-section": "hero-block-module__hero-section___JxvFI",
     "text-wrapper": "hero-block-module__text-wrapper___UICE6",
     "flex-wrapper": "hero-block-module__flex-wrapper___LnIi1",
     "right-col-wrapper": "hero-block-module__right-col-wrapper___ZqNY8",
-    "email-copyright-wrapper": "hero-block-module__email-copyright-wrapper___UMiLo"
+    "description": "hero-block-module__description___C9NkI",
+    "email-copyright-wrapper": "hero-block-module__email-copyright-wrapper___UMiLo",
+    "hero-image-wrapper": "hero-block-module__hero-image-wrapper___FP291"
   }
 }
