@@ -1,5 +1,9 @@
 @use "./../../../../src/styles/variables.scss" as *;
 
+.hero-section {
+  padding-top: 150px;
+}
+
 .text-wrapper::after {
   content: '';
   display: block;
@@ -24,9 +28,15 @@
 
 .right-col-wrapper {
   padding-left: 22%;
+  padding-top: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media screen and (max-width: $laptop) {
-    padding: 0;
+    padding-left: 0;
+    padding-top: 3px;
   }
 }
 

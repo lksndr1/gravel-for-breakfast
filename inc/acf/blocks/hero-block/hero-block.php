@@ -1,5 +1,6 @@
 <?php
 $default_classes = [
+    'hero-section' => 'hero-section',
     'text-wrapper' => 'text-wrapper',
     'flex-wrapper' => 'flex-wrapper',
     'left-col' => 'left-col',
@@ -18,7 +19,7 @@ if (file_exists($modules_file)) {
 ?>
 
 <div class="container">
-    <section class="section">
+    <section class="section <?php echo esc_attr($classes['hero-section']); ?>">
         <div class="<?php echo esc_attr($classes['text-wrapper']); ?>">
             <div class="<?php echo esc_attr($classes['flex-wrapper']); ?>">
                 <div class="<?php echo esc_attr($classes['left-col']); ?>">

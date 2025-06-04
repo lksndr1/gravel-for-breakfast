@@ -12,7 +12,7 @@ $big_target = isset($args['target']) ? $args['target'] : '';
 
 <a class="bi-link <?php echo esc_attr($big_link_class); ?>" href="<?php echo esc_url($big_link); ?>" target="<?php echo esc_url($target); ?>">
         <?php echo esc_html($big_link_text); ?>
-        <span class='button-icon'>
+        <span class='button-big-icon'>
             <?php
                 $svg_url = get_field('hero_link_icon');
                 if ($svg_url) {
