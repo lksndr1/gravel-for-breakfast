@@ -2,6 +2,14 @@
 
 .hero-section {
   padding-top: 150px;
+
+  @media screen and (max-width: $laptop) {
+    padding-top: 125px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 80px;
+  }
 }
 
 .text-wrapper::after {
@@ -11,6 +19,14 @@
   height: 1px;
   background-color: $light-color;
   margin: 24px 0 12px;
+
+  @media screen and (max-width: $laptop) {
+    margin: 26px 0 16px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 24px 0;
+  }
 }
 
 .flex-wrapper {
@@ -19,6 +35,11 @@
 
   @media screen and (max-width: $laptop) {
     gap: 24px;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -35,7 +56,10 @@
 
   @media screen and (max-width: $laptop) {
     padding-left: 0;
-    padding-top: 3px;
+  }
+
+  @media screen and (max-width: 500px) {
+    align-items: center;
   }
 }
 
@@ -45,11 +69,29 @@
   @media screen and (max-width: $laptop) {
     padding-top: 3px;
   }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 0;
+  }
+}
+
+.big_link {
+  margin-top: 24px;
 }
 
 .email-copyright-wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 670px) {
+    justify-content: end;
+  }
+}
+
+.hero_copyright {
+  @media screen and (max-width: 670px) {
+    display: none;
+  }
 }
 
 .hero-image-wrapper {
