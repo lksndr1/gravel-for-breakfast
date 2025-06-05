@@ -7,9 +7,10 @@ $default_classes = [
     'right-col' => 'right-col',
     'right-col-wrapper' => 'right-col-wrapper',
     'description' => 'description',
+    'big_link' => 'big_link',
     'email-copyright-wrapper' => 'email-copyright-wrapper',
+    'hero_copyright' => 'hero_copyright',
     'hero-image-wrapper' => 'hero-image-wrapper',
-    
 ];
 
 $modules_file = get_template_directory() . '/assets/blocks/styles/modules.json';
@@ -71,7 +72,7 @@ if (file_exists($modules_file)) {
                         $copyright = get_field('copyright', 'option');
                         if ($copyright) :
                         ?>
-                            <p><?php echo $copyright ?></p>
+                            <p class="<?php echo esc_attr($classes['hero_copyright']); ?>"><?php echo $copyright ?></p>
                         <?php endif; ?>
                     </div>
                 </div>
