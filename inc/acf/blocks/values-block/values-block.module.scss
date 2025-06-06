@@ -1,0 +1,30 @@
+@use "./../../../../src/styles/variables.scss" as *;
+
+.heading-description-wrapper {
+    display: flex;
+    gap: 48px;
+}
+
+.heading-description-wrapper>* {
+    flex: 1;
+}
+
+.heading-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading-wrapper::after {
+    position: absolute;
+    right: -24px;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: $light-color;
+}
+
+.heading-description-wrapper p {
+    padding-left: 22%;
+}
