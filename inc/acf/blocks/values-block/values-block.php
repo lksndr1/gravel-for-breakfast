@@ -1,6 +1,7 @@
 <?php
     $default_classes = [
     'heading-description-wrapper' => 'heading-description-wrapper',
+    'values-wrapper' => 'values-wrapper',
 ];
 
 $modules_file = get_template_directory() . '/assets/blocks/styles/modules.json';
@@ -26,5 +27,33 @@ if (file_exists($modules_file)) {
                 </p>
             </div>
         </div>
+
+        <?php if( have_rows('values_items') ): ?>
+            <div class="<?php echo esc_attr($classes['values-wrapper']); ?>">
+                <?php 
+                $counter = 0;
+                while( have_rows('values_items') ): the_row(); 
+                    $counter++;
+                    $title = get_sub_field('value_title');
+                    $text = get_sub_field('value_text');
+                    echo $counter;
+                ?>
+                <div>
+                    <h2><?php echo esc_html($title); ?></h2>
+                    <p><?php echo esc_html($text); ?></p>
+                </div>
+
+                    <?php if ($counter % 2 == 0): ?>
+                        <div>
+                            <?php 
+                            $image = get_sub_field('value_even-num_image');
+                            if ($image): ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
     </section>
 </div>

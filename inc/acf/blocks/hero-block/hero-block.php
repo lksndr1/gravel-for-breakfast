@@ -84,7 +84,7 @@ if (file_exists($modules_file)) {
         $hero_image = get_field('hero_image');
         if(!empty($hero_image)) : ?>
             <div class="<?php echo esc_attr($classes['hero-image-wrapper']); ?>">
-                <img src="<?php echo esc_url($hero_image['url']) ?>" alt="<?php echo esc_attr($hero_image['alt'])?>">
+                <img src="<?php echo esc_url($hero_image['url']) ?>" alt="<?php echo esc_attr($hero_image['alt'])?>" />
             </div>
         <?php endif; ?>
 
