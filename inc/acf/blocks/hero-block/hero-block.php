@@ -1,11 +1,16 @@
 <?php
 $default_classes = [
+    'hero-section' => 'hero-section',
     'text-wrapper' => 'text-wrapper',
     'flex-wrapper' => 'flex-wrapper',
     'left-col' => 'left-col',
     'right-col' => 'right-col',
     'right-col-wrapper' => 'right-col-wrapper',
+    'description' => 'description',
+    'big_link' => 'big_link',
     'email-copyright-wrapper' => 'email-copyright-wrapper',
+    'hero_copyright' => 'hero_copyright',
+    'hero-image-wrapper' => 'hero-image-wrapper',
 ];
 
 $modules_file = get_template_directory() . '/assets/blocks/styles/modules.json';
@@ -18,7 +23,7 @@ if (file_exists($modules_file)) {
 ?>
 
 <div class="container">
-    <section class="section">
+    <section class="section <?php echo esc_attr($classes['hero-section']); ?>">
         <div class="<?php echo esc_attr($classes['text-wrapper']); ?>">
             <div class="<?php echo esc_attr($classes['flex-wrapper']); ?>">
                 <div class="<?php echo esc_attr($classes['left-col']); ?>">
@@ -26,7 +31,7 @@ if (file_exists($modules_file)) {
                 </div>
                 <div class="<?php echo esc_attr($classes['right-col']); ?>">
                     <div class="<?php echo esc_attr($classes['right-col-wrapper']); ?>">
-                        <p><?php echo get_field('description') ?></p>
+                        <p class="<?php echo esc_attr($classes['description']); ?>"><?php echo get_field('description') ?></p>
                         <?php
                             $hero_link = get_field('hero_link');
                             if (!empty($hero_link)) :
@@ -67,12 +72,21 @@ if (file_exists($modules_file)) {
                         $copyright = get_field('copyright', 'option');
                         if ($copyright) :
                         ?>
-                            <p><?php echo $copyright ?></p>
+                            <p class="<?php echo esc_attr($classes['hero_copyright']); ?>"><?php echo $copyright ?></p>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        <?php
+        $hero_image = get_field('hero_image');
+        if(!empty($hero_image)) : ?>
+            <div class="<?php echo esc_attr($classes['hero-image-wrapper']); ?>">
+                <img src="<?php echo esc_url($hero_image['url']) ?>" alt="<?php echo esc_attr($hero_image['alt'])?>">
+            </div>
+        <?php endif; ?>
+
     </section>
 </div>
