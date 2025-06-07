@@ -2,6 +2,8 @@
     $default_classes = [
     'heading-description-wrapper' => 'heading-description-wrapper',
     'values-wrapper' => 'values-wrapper',
+    'title-text-wrapper' => 'title-text-wrapper',
+
 ];
 
 $modules_file = get_template_directory() . '/assets/blocks/styles/modules.json';
@@ -36,22 +38,23 @@ if (file_exists($modules_file)) {
                     $counter++;
                     $title = get_sub_field('value_title');
                     $text = get_sub_field('value_text');
-                    echo $counter;
                 ?>
-                <div>
-                    <h2><?php echo esc_html($title); ?></h2>
-                    <p><?php echo esc_html($text); ?></p>
-                </div>
+
+                    <div class="<?php echo esc_attr($classes['title-text-wrapper']); ?>">
+                        <h2><?php echo esc_html($title); ?></h2>
+                        <p><?php echo esc_html($text); ?></p>
+                    </div>
 
                     <?php if ($counter % 2 == 0): ?>
-                        <div>
-                            <?php 
-                            $image = get_sub_field('value_even-num_image');
-                            if ($image): ?>
+                        <?php 
+                        $image = get_sub_field('value_even-num_image');
+                        if ($image): ?>
+                            <div class="<?php echo esc_attr($classes['title-text-wrapper']); ?>">
                                 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <?php endif; ?>
-                        </div>
+                            </div>
+                        <?php endif; ?>
                     <?php endif; ?>
+                
                 <?php endwhile; ?>
             </div>
         <?php endif; ?>
