@@ -1,7 +1,4 @@
 {
-  "block1": {
-    "text1": "block1-module__text1___g4nM-"
-  },
   "hero-block": {
     "hero-section": "hero-block-module__hero-section___JxvFI",
     "text-wrapper": "hero-block-module__text-wrapper___UICE6",
@@ -12,5 +9,12 @@
     "email-copyright-wrapper": "hero-block-module__email-copyright-wrapper___UMiLo",
     "hero_copyright": "hero-block-module__hero_copyright___R6tnq",
     "hero-image-wrapper": "hero-block-module__hero-image-wrapper___FP291"
+  },
+  "values-block": {
+    "heading-description-wrapper": "values-block-module__heading-description-wrapper___WjQYc",
+    "heading-wrapper": "values-block-module__heading-wrapper___XTyta",
+    "values-wrapper": "values-block-module__values-wrapper___d3Eno",
+    "title-text-wrapper": "values-block-module__title-text-wrapper___4c3M4",
+    "value-item": "values-block-module__value-item___FRqWe"
   }
 }

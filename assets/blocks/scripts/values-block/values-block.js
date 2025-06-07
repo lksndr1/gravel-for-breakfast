@@ -1,0 +1,1 @@
+if(window.innerWidth<768){const e=document.querySelector(".hide-on-mobile");e&&e.remove()}
