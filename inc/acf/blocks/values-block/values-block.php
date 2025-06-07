@@ -50,7 +50,7 @@ if (file_exists($modules_file)) {
                         <?php 
                         $image = get_sub_field('value_even-num_image');
                         if ($image): ?>
-                            <div class="<?php echo esc_attr($classes['title-text-wrapper']); ?>">
+                            <div class="<?php echo esc_attr($classes['title-text-wrapper']); ?> hide-on-mobile">
                                 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             </div>
                         <?php endif; ?>

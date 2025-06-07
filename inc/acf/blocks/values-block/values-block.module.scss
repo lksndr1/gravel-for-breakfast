@@ -4,6 +4,16 @@
     display: flex;
     gap: 48px;
     margin-bottom: 120px;
+
+    @media screen and (max-width: $laptop) {
+        gap: 24px;
+        margin-bottom: 100px;
+    }
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        margin-bottom: 36px;
+    }
 }
 
 .heading-description-wrapper>* {
@@ -24,10 +34,22 @@
     width: 1px;
     height: 100%;
     background-color: $light-color;
+
+    @media screen and (max-width: $laptop) {
+        right: -12px;
+    }
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 }
 
 .heading-description-wrapper p {
     padding-left: 22%;
+
+    @media screen and (max-width: $laptop) {
+        padding-left: 0;
+    }
 }
 
 .values-wrapper {
@@ -36,20 +58,15 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 48px;
     grid-row-gap: 48px;
-}
 
-.value-item {
-    background-color: $grey;
-    padding: 48px 24px;
-}
+    @media screen and (max-width: $laptop) {
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+    }
 
-.value-item h3::after {
-    display: block;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: $light-color;
-    margin: 94px 0 24px;
+    @media screen and (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .title-text-wrapper:nth-child(1) {
@@ -62,10 +79,18 @@
 
 .title-text-wrapper:nth-child(3) {
     grid-area: 1 / 3 / 2 / 5;
+
+    @media screen and (max-width: $tablet) {
+        grid-area: 2 / 1 / 3 / 2;
+    }
 }
 
 .title-text-wrapper:nth-child(4) {
     grid-area: 2 / 3 / 3 / 4;
+
+    @media screen and (max-width: $tablet) {
+        grid-area: 2 / 2 / 3 / 3;
+    }
 }
 
 .title-text-wrapper:nth-child(5) {
@@ -74,4 +99,30 @@
 
 .title-text-wrapper:nth-child(6) {
     grid-area: 2 / 1 / 3 / 3;
+}
+
+.value-item {
+    background-color: $grey;
+    padding: 48px 24px;
+
+    @media screen and (max-width: $laptop) {
+        padding: 12px;
+    }
+}
+
+.value-item h3::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $light-color;
+    margin: 94px 0 24px;
+
+    @media screen and (max-width: $laptop) {
+        margin: 51px 0 12px;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin: 33px 0 12px;
+    }
 }
