@@ -3,6 +3,7 @@
 .heading-description-wrapper {
     display: flex;
     gap: 48px;
+    margin-bottom: 120px;
 }
 
 .heading-description-wrapper>* {
@@ -35,6 +36,20 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 48px;
     grid-row-gap: 48px;
+}
+
+.value-item {
+    background-color: $grey;
+    padding: 48px 24px;
+}
+
+.value-item h3::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $light-color;
+    margin: 94px 0 24px;
 }
 
 .title-text-wrapper:nth-child(1) {

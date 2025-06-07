@@ -3,6 +3,7 @@
     'heading-description-wrapper' => 'heading-description-wrapper',
     'values-wrapper' => 'values-wrapper',
     'title-text-wrapper' => 'title-text-wrapper',
+    'value-item' => 'value-item',
 
 ];
 
@@ -40,8 +41,8 @@ if (file_exists($modules_file)) {
                     $text = get_sub_field('value_text');
                 ?>
 
-                    <div class="<?php echo esc_attr($classes['title-text-wrapper']); ?>">
-                        <h2><?php echo esc_html($title); ?></h2>
+                    <div class="<?php echo esc_attr($classes['title-text-wrapper']); ?> <?php echo esc_attr($classes['value-item']); ?>">
+                        <h3><?php echo esc_html($title); ?></h3>
                         <p><?php echo esc_html($text); ?></p>
                     </div>
 
